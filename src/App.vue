@@ -28,10 +28,11 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Sora:400,600&display=swap');
 
 :root {
-  --primary_dark: #151318; // #1E0233
+  --primary_dark: #151318; // 
   --dark: #433b66;
   --primary_light: #E7D3CC;
   --details: #895575;
+  --details2: rgba(147, 10, 252, 0.8);
   --font: 'Sora', Verdana, sans-serif;
   --title: show_title 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   --slide_l: slide_left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -53,9 +54,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   padding-bottom: 40px;
+  max-width: 1400px;
   a {
-    font-weight: bold;
     color: var(--details);
+    transition: .3s ease-in-out;
+    &:hover {
+      color: var(--primary_light)
+    }
+  }
+  .button {
+    display: block;
+    border: none;
+    padding: 5px;
+    margin: 20px auto;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: var(--primary_light);
+    color: var(--primary_dark);
+    transition: .3s ease-in-out;
+    &:hover {
+      color: var(--primary_light);
+      background: var(--primary_dark);
+    }
   }
 }
 
@@ -67,8 +90,8 @@ body {
   margin: 0 auto;
   font-size: 1.2em;
   a {
+    font-weight: bold;
     color: var(--dark);
-    transition: .3s ease-in-out;
     &:hover {
       color: var(--details);
     }
@@ -90,6 +113,20 @@ body {
   opacity: 0;
 }
 .route-leave-active {
+  transition: all .4s ease-in;
+}
+
+// v-for transition
+.show-enter-from {
+  opacity: 0;
+}
+.show-enter-active {
+  transition: all .4s ease-out;
+}
+.show-leave-to {
+  opacity: 0;
+}
+.show-leave-active {
   transition: all .4s ease-in;
 }
 
