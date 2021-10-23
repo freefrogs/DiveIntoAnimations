@@ -13,30 +13,49 @@
       <component :is="Component"></component>
     </transition>
   </router-view>
+  <Footer />
 </template>
+
+<script>
+import Footer from "@/components/Footer"
+
+export default {
+  components: { Footer }
+}
+</script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Sora:400,600&display=swap');
 
-$primary_dark: #151318; // #1E0233
-$dark: #433b66;
-$primary_light: #E7D3CC;
-$details: #895575;
-$font: 'Sora', Verdana, sans-serif;
+:root {
+  --primary_dark: #151318; // #1E0233
+  --dark: #433b66;
+  --primary_light: #E7D3CC;
+  --details: #895575;
+  --font: 'Sora', Verdana, sans-serif;
+  --title: show_title 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  --slide_l: slide_left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  --slide_r: slide_right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 
 body {
-  background: $primary_dark;
-  color: $primary_light;
+  background: var(--primary_dark);
+  color: var(--primary_light);
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
 }
 
 #app {
-  font-family: $font;
+  font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  padding-bottom: 40px;
   a {
     font-weight: bold;
-    color: $details;
+    color: var(--details);
   }
 }
 
@@ -48,13 +67,13 @@ body {
   margin: 0 auto;
   font-size: 1.2em;
   a {
-    color: $dark;
+    color: var(--dark);
     transition: .3s ease-in-out;
     &:hover {
-      color: $details;
+      color: var(--details);
     }
     &.router-link-exact-active {
-      color: $primary_light;
+      color: var(--primary_light);
     }
   }
 }
@@ -72,5 +91,19 @@ body {
 }
 .route-leave-active {
   transition: all .4s ease-in;
+}
+
+// keyframes
+@keyframes show_title {
+  0% { transform: scale(3); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes slide_left {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes slide_right {
+  0% { transform: translateX(100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
 }
 </style>
