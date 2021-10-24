@@ -7,7 +7,7 @@
       <p v-if="example"><a :href="example" target="_blank">Example</a></p>
     </div>
     <div class="box"></div>
-    <svg>
+    <svg v-if="svg">
       <filter id="wavy">
         <feTurbulence x="0" y="0" baseFrequency="0.009" numOctaves="5" seed="2">
           <animate attributeName="baseFrequency" dur="30s" values="0.02;0.005;0.02" repeatCount="indefinite" />
@@ -34,6 +34,10 @@ export default {
     },
     other: {
       required: false
+    },
+    svg: {
+      type: Boolean,
+      default: false
     }
   }
 }

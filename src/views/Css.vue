@@ -1,5 +1,5 @@
 <template>
-  <div class="css">
+  <div class="css section">
     <h1>CSS is not as boring as you think</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quos earum, dignissimos ipsam quam quas exercitationem quibusdam quod, veritatis sequi non, sint porro suscipit. Vitae consequatur pariatur repellendus. Iste, magni.</p>
     <transition name="show" mode="out-in">
@@ -28,6 +28,7 @@
       <Keyframes v-if="showKeyframes" @hide="changeKeyframesStatus" />
     </transition>
     <transition name="show" mode="out-in">
+      <Gradients v-if="showGradients" @hide="changeGradientsStatus" />
     </transition>
   </div>
 </template>
@@ -35,12 +36,14 @@
 <script>
 import CssProperties from "@/components/CssProperties"
 import Keyframes from "@/components/Keyframes"
+import Gradients from "@/components/Gradients"
 
 export default {
   name: 'Css',
   components: {
     CssProperties,
-    Keyframes
+    Keyframes,
+    Gradients
   },
   data() {
     return {
@@ -85,8 +88,6 @@ export default {
 
 <style lang="scss">
 .css {
-  width: 70%;
-  margin: 0 auto;
   .cards__box {
     margin-top: 40px;
     display: flex;

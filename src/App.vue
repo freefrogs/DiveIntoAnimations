@@ -2,7 +2,7 @@
   <div id="nav">
     <router-link to="/">Home</router-link>
     <router-link to="/css">CSS</router-link>
-    <router-link to="/animate">Animate</router-link>
+    <!-- <router-link to="/animate">Animate</router-link> -->
     <router-link to="/svg">SVG</router-link>
     <router-link to="/canvas">Canvas</router-link>
     <router-link to="/libraries">Libraries</router-link>
@@ -88,6 +88,11 @@ body {
       background: var(--primary_dark);
     }
   }
+}
+
+.section {
+  width: 70%;
+  margin: 0 auto;
 }
 
 .boxesContainer {

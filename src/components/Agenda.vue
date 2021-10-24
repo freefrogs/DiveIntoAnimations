@@ -3,7 +3,7 @@
     <h2 class="agenda__title">What will you find out?</h2>
     <ul class="agenda__list">
       <li class="agenda__item agenda__item--1">CSS is not as boring as you think</li>
-      <li class="agenda__item agenda__item--2">What is the Element.animate()</li>
+      <!-- <li class="agenda__item agenda__item--2">What is the Element.animate()</li> -->
       <li class="agenda__item agenda__item--3">SVG - is it really that hard?</li>
       <li class="agenda__item agenda__item--4">Canvas - mysterious HTML5 tag</li>
       <li class="agenda__item agenda__item--5">Try with the library</li>
