@@ -37,8 +37,12 @@ export default {
   --title: show_title 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   --slide_l: slide_left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   --slide_r: slide_right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  --show_el: show 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   background: var(--primary_dark);
@@ -55,12 +59,16 @@ body {
   text-align: center;
   padding-bottom: 40px;
   max-width: 1400px;
-  a {
+  a, .fake__a {
     color: var(--details);
     transition: .3s ease-in-out;
     &:hover {
       color: var(--primary_light)
     }
+  }
+  .fake__a {
+    cursor: pointer;
+    text-decoration: underline;
   }
   .button {
     display: block;
@@ -80,6 +88,21 @@ body {
       background: var(--primary_dark);
     }
   }
+}
+
+.boxesContainer {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #nav {
@@ -142,5 +165,9 @@ body {
 @keyframes slide_right {
   0% { transform: translateX(100px); opacity: 0; }
   100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes show {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 </style>

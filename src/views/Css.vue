@@ -22,6 +22,9 @@
       </div>
     </transition>
     <transition name="show" mode="out-in">
+      <CssProperties v-if="showProperties" @hide="changePropertiesStatus" />
+    </transition>
+    <transition name="show" mode="out-in">
     </transition>
     <transition name="show" mode="out-in">
     </transition>
@@ -29,8 +32,13 @@
 </template>
 
 <script>
+import CssProperties from "@/components/CssProperties"
+
 export default {
   name: 'Css',
+  components: {
+    CssProperties
+  },
   data() {
     return {
       showProperties: false,
@@ -87,7 +95,7 @@ export default {
     border: 1px solid var(--primary_light);
     padding: 30px 20px;
     min-width: 180px;
-    -webkit-box-reflect: below 5px linear-gradient(transparent 70%, var(--primary_dark));
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, var(--primary_dark));
     &:first-child {
       animation: var(--slide_l);
       animation-delay: 0.6s !important;
