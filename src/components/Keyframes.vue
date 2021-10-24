@@ -27,22 +27,22 @@ export default {
     return {
       boxes: [
         {
-          id: 1,
+          id: 3,
           title: 'MDN Web Docs',
           other: 'https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes'
         },
         {
-          id: 2,
+          id: 4,
           title: 'Keyframe Generator',
           other: 'https://animista.net'
         },
         {
-          id: 3,
+          id: 5,
           title: 'Cubic-bezier Generator',
           other: 'https://cubic-bezier.com'
         },
         {
-          id: 4,
+          id: 6,
           title: 'Example',
           other: 'https://freefrogs.github.io/Animations/#/3'
         }

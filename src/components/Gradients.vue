@@ -27,17 +27,17 @@ export default {
     return {
       boxes: [
         {
-          id: 1,
+          id: 7,
           title: 'MDN Web Docs',
           other: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients'
         },
         {
-          id: 2,
+          id: 8,
           title: 'Gradients Playground',
           other: 'https://css-playground.com/view/45/css-gradient-playground'
         },
         {
-          id: 3,
+          id: 9,
           title: 'Example',
           other: 'https://freefrogs.github.io/Animations/#/11'
         }
