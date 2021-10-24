@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="home"
-    @click="showAgenda = !showAgenda"
-  >
+  <div class="home">
     <h1>Dive Into Animation</h1>
     <p>
       This application was created to show that animations can be obtained not only by using libraries.<br>
@@ -10,6 +7,11 @@
       Interesting effects can be also obtained by using mechanisms built into the browser.<br>
       Of course, we are talking about browsers other than IE ;-).
     </p>
+    <button
+      v-if="!showAgenda"
+      class="button attention"
+      @click="showAgenda = !showAgenda"
+    >click me</button>
     <Agenda v-if="showAgenda" />
   </div>
 </template>

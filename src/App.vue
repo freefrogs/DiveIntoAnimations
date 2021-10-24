@@ -6,7 +6,7 @@
     <router-link to="/svg">SVG</router-link>
     <router-link to="/canvas">Canvas</router-link>
     <router-link to="/libraries">Libraries</router-link>
-    <router-link to="/vue-animations">Vue Animations</router-link>
+    <!-- <router-link to="/vue-animations">Vue Animations</router-link> -->
   </div>
   <router-view v-slot="{ Component }">
     <transition name="route" mode="out-in">
@@ -28,7 +28,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Sora:400,600&display=swap');
 
 :root {
-  --primary_dark: #151318; // 
+  --primary_dark: #151318;
   --dark: #433b66;
   --primary_light: #E7D3CC;
   --details: #895575;
