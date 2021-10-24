@@ -25,6 +25,7 @@
       <CssProperties v-if="showProperties" @hide="changePropertiesStatus" />
     </transition>
     <transition name="show" mode="out-in">
+      <Keyframes v-if="showKeyframes" @hide="changeKeyframesStatus" />
     </transition>
     <transition name="show" mode="out-in">
     </transition>
@@ -33,11 +34,13 @@
 
 <script>
 import CssProperties from "@/components/CssProperties"
+import Keyframes from "@/components/Keyframes"
 
 export default {
   name: 'Css',
   components: {
-    CssProperties
+    CssProperties,
+    Keyframes
   },
   data() {
     return {
@@ -82,7 +85,7 @@ export default {
 
 <style lang="scss">
 .css {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   .cards__box {
     margin-top: 40px;

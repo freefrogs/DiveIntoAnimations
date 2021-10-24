@@ -2,7 +2,8 @@
   <div class="boxContainer">
     <div class="center boxTexts">
       <p>{{title}}</p>
-      <p><a :href="docs" target="_blank">MDN Web Docs</a></p>
+      <p v-if="docs"><a :href="docs" target="_blank">MDN Web Docs</a></p>
+      <p v-if="other"><a :href="other" target="_blank">check out</a></p>
       <p v-if="example"><a :href="example" target="_blank">Example</a></p>
     </div>
     <div class="box"></div>
@@ -26,10 +27,12 @@ export default {
       required: true
     },
     docs: {
-      type: String,
-      required: true
+      required: false
     },
     example: {
+      required: false
+    },
+    other: {
       required: false
     }
   }
