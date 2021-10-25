@@ -56,9 +56,6 @@ export default {
 
 <style lang="scss">
 .svg {
-  .author {
-    text-align: right;
-  }
   .boxContainer .box {
     filter: url(#wavy) blur(1px);
   }

@@ -8,7 +8,7 @@
       It can respond to JavaScript events (...) and any user action (key clicks, mouse clicks, button clicks, finger movement).
     </q>
     <p class="author">Source: <a href="https://www.w3schools.com/default.asp" target="_blank">W3Schools</a></p>
-    <div class="boxesContainer">
+    <div class="boxesContainer canvas--entry">
       <div
         v-for="(card, index) in cards"
         :key="index"
@@ -69,8 +69,8 @@ export default {
 
 <style lang="scss">
 .canvas {
-  .author {
-    text-align: right;
+  &--entry {
+    animation: var(--title);
   }
   .square {
     margin: 0;

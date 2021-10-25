@@ -95,6 +95,10 @@ body {
   margin: 0 auto;
 }
 
+.author {
+  text-align: right;
+}
+
 .boxesContainer {
   margin: 40px 0;
   display: flex;

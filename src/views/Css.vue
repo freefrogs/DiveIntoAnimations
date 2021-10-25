@@ -1,7 +1,7 @@
 <template>
   <div class="css section">
     <h1>CSS is not as boring as you think</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quos earum, dignissimos ipsam quam quas exercitationem quibusdam quod, veritatis sequi non, sint porro suscipit. Vitae consequatur pariatur repellendus. Iste, magni.</p>
+    <p>Cascading Style Sheet (CSS) is the language that describes how HTML elements should be displayed. Layout, colors, fonts, accessibility - you name it, everything this and much more can be done via CSS. A good website is an eye-catching website with tailor made transitions and animations. Many of them can be done using pure CSS. Further you dip into its possibilities, the more you realize how much you were underestimating it.</p>
     <transition name="show" mode="out-in">
       <div
         v-if="!showProperties && !showKeyframes && !showGradients"
@@ -17,7 +17,7 @@
           <button
             class="button"
             @click="card.show"
-          >Check out</button>
+          >Try it</button>
         </div>
       </div>
     </transition>
