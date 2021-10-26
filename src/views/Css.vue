@@ -21,15 +21,9 @@
         </div>
       </div>
     </transition>
-    <transition name="show" mode="out-in">
-      <CssProperties v-if="showProperties" @hide="changePropertiesStatus" />
-    </transition>
-    <transition name="show" mode="out-in">
-      <Keyframes v-if="showKeyframes" @hide="changeKeyframesStatus" />
-    </transition>
-    <transition name="show" mode="out-in">
-      <Gradients v-if="showGradients" @hide="changeGradientsStatus" />
-    </transition>
+    <CssProperties v-if="showProperties" @hide="changePropertiesStatus" />
+    <Keyframes v-if="showKeyframes" @hide="changeKeyframesStatus" />
+    <Gradients v-if="showGradients" @hide="changeGradientsStatus" />
   </div>
 </template>
 

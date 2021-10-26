@@ -6,6 +6,7 @@
         :key="box.id"
         :title="box.title"
         :other="box.other"
+        class="entry"
       />
     </div>
     <div class="links">
@@ -54,6 +55,24 @@ export default {
 
 <style lang="scss">
 .keyframes {
+  .entry {
+    &:first-child {
+      animation: var(--slide_l);
+      animation-delay: 0.6s !important;
+    }
+    &:nth-child(2) {
+      animation: var(--title);
+      animation-delay: 0.8s !important;
+    }
+    &:nth-child(3) {
+      animation: var(--title);
+      animation-delay: 0.7s !important;
+    }
+    &:last-child {
+      animation: var(--slide_r);
+      animation-delay: 0.9s !important;
+    }
+  }
   .boxContainer {
     .box::before {
       box-shadow: 0 0 20px var(--details), inset 0 0 20px var(--details2);

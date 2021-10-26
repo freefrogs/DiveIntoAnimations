@@ -7,6 +7,7 @@
         :title="box.title"
         :docs="box.docs"
         :example="box.example"
+        class="entry"
       />
     </div>
     <div class="links">
@@ -53,13 +54,29 @@ export default {
 </script>
 
 <style lang="scss">
-.cssProperties .links {
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  * {
-    padding: 0 20px;
+.cssProperties {
+  .entry {
+    &:first-child {
+      animation: var(--slide_l);
+      animation-delay: 0.6s !important;
+    }
+    &:nth-child(2) {
+      animation: var(--title);
+      animation-delay: 0.8s !important;
+    }
+    &:last-child {
+      animation: var(--slide_r);
+      animation-delay: 0.4s !important;
+    }
+  }
+  .links {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    * {
+      padding: 0 20px;
+    }
   }
 }
 </style>

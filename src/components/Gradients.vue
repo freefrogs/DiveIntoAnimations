@@ -6,6 +6,7 @@
         :key="box.id"
         :title="box.title"
         :other="box.other"
+        class="entry"
       />
     </div>
     <div class="links">
@@ -49,6 +50,20 @@ export default {
 
 <style lang="scss">
 .gradients {
+  .entry {
+    &:first-child {
+      animation: var(--slide_l);
+      animation-delay: 0.6s !important;
+    }
+    &:nth-child(2) {
+      animation: var(--title);
+      animation-delay: 0.8s !important;
+    }
+    &:last-child {
+      animation: var(--slide_r);
+      animation-delay: 0.4s !important;
+    }
+  }
   .boxContainer {
     .box::before {
       box-shadow: 0 0 10px var(--dark), inset 0 0 10px var(--dark);
