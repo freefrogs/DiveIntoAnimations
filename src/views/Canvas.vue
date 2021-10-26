@@ -41,11 +41,11 @@ export default {
     return {
       cards: [
         {
-          title: 'Cavas W3School Tutorial',
+          title: 'Canvas W3School Tutorial',
           link: 'https://www.w3schools.com/graphics/canvas_intro.asp'
         },
         {
-          title: 'Cavas MDN Tutorial',
+          title: 'Canvas MDN Tutorial',
           link: 'https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial'
         },
         {

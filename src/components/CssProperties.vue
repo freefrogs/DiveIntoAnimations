@@ -15,7 +15,7 @@
         class="fake__a"
         @click="$emit('hide')"
       >BACK</p>
-      <a href="https://caniuse.com/">Can I use</a>
+      <a href="https://caniuse.com/" target="_blank">Can I use</a>
     </div>
   </div>
 </template>
@@ -44,7 +44,7 @@ export default {
         {
           id: 3,
           title: 'filter',
-          docs: 'developer.mozilla.org/en-US/docs/Web/CSS/filter',
+          docs: 'https://developer.mozilla.org/en-US/docs/Web/CSS/filter',
           example: 'https://codepen.io/stoumann/pen/MWeNmyb'
         }
       ]
